@@ -1,0 +1,11 @@
+<section class="layout vertical">
+  <div class="layout horizontal justified">
+    <label for="bootrom">Boot ROM</label>
+    <input id="bootrom" type="file" accept=".bin" (change)="bootromFileChanged($event)">
+  </div>
+  <div class="layout horizontal justified">
+    <label for="gamerom">Game ROM</label>
+    <input id="gamerom" type="file" accept=".gb" (change)="gameromFileChanged($event)">
+  </div>
+  <button type="button" [disabled]="buttonState()" (click)="load()">{{ buttonText() }}</button>
+</section>
